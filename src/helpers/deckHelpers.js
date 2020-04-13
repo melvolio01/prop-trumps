@@ -19,6 +19,8 @@ export const updateDecksWin = (winner, loser) => {
     const winDeck = [...winner];
     const loseDeck = [...loser];
     const card = loseDeck.shift();
+    const winCard = winDeck.shift();
+    winDeck.push(winCard);
     winDeck.push(card);
     return [winDeck, loseDeck]
 }
@@ -27,6 +29,8 @@ export const updateDecksLoss = (loser, winner) => {
     const winDeck = [...winner];
     const loseDeck = [...loser];
     const card = loseDeck.shift();
+    const winCard = winDeck.shift();
+    winDeck.push(winCard);
     winDeck.push(card);
     return [loseDeck, winDeck]
 }

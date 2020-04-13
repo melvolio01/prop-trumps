@@ -58,3 +58,22 @@
         color: #d63447;   
     }
 }
+
+.next-button {
+    width: 100px;
+    height: 25px;
+    text-align: center;
+    padding: 2px;
+    margin: 0;
+    color: #fff;
+    background-color: #323232;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.next-button:hover {
+    background-color: #dbdbdb;
+    color: #323232;
+    border: 1px solid #323232;
+}
