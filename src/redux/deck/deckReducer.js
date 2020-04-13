@@ -8,7 +8,6 @@ const INITIAL_STATE = {
 }
 
 const deckReducer = (state = INITIAL_STATE, action) => {
-    console.log(`ACTION: ${JSON.stringify(action.type)}`)
     switch (action.type) {
         case actionTypes.SET_PLAYERS:
             return {
@@ -24,6 +23,11 @@ const deckReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 selectedProperty: action.payload
+            }
+        case actionTypes.SET_TURN:
+            return {
+                ...state,
+                playerTurn: !state.playerTurn
             }
         default:
             return INITIAL_STATE

@@ -14,3 +14,7 @@ export const setSelectedProperty = selectedProperty => ({
     type: actionTypes.SET_SELECTED_PROPERTY,
     payload: selectedProperty
 })
+
+export const setTurn = () => ({
+    type: actionTypes.SET_TURN
+})

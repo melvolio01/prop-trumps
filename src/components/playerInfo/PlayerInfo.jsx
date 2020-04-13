@@ -4,7 +4,6 @@ import './PlayerInfo.scss'
 
 
 const PlayerInfo = ({ selectedProperty, playerName, ind, decks }) => {
-    console.log(selectedProperty)
     return decks != undefined && (
         <div className="player-info">
             <div className="player-name">{playerName}: {decks[ind].length} cards left</div>
@@ -13,7 +12,7 @@ const PlayerInfo = ({ selectedProperty, playerName, ind, decks }) => {
     );
 };
 
-const mapStateToProps = ({ deck: { players, selectedProperty, decks } }) => ({
+const mapStateToProps = ({ deck: { players, selectedProperty, decks, playerTurn } }) => ({
     players, selectedProperty, decks
 })
 

@@ -34,3 +34,8 @@ export const updateDecksLoss = (loser, winner) => {
     winDeck.push(card);
     return [loseDeck, winDeck]
 }
+
+export const handleCPUTurn = () => {
+    const properties = shuffleDeck(["dogfight", "payload", "production", "topspeed", "range", "groundattack"]);
+    return properties[0];
+}
