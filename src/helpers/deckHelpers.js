@@ -39,3 +39,10 @@ export const handleCPUTurn = () => {
     const properties = shuffleDeck(["dogfight", "payload", "production", "topspeed", "range", "groundattack"]);
     return properties[0];
 }
+
+export const checkWin = decks => {
+    let winner = '';
+    if (decks[0].length === 30) winner = "Player"
+    else if (decks[0].length === 0) winner = "CPU"
+    return winner;
+}

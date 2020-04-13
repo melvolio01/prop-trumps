@@ -18,3 +18,8 @@ export const setSelectedProperty = selectedProperty => ({
 export const setTurn = () => ({
     type: actionTypes.SET_TURN
 })
+
+export const checkWin = decks => ({
+    type: actionTypes.CHECK_WIN,
+    payload: decks
+})

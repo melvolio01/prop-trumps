@@ -7,3 +7,34 @@
   width: 33%;
   background-color: #84a9ac;
 }
+
+.winner {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  font-weight: 300;
+  letter-spacing: 2px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #dbdbdb;
+  color: #f0a500;
+}
+
+.reset-button {
+  width: 100px;
+  height: 25px;
+  text-align: center;
+  padding: 2px;
+  margin: 0;
+  color: #dbdbdb;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reset-button:hover {
+  background-color: #cf7500;
+  color: #000000;
+}

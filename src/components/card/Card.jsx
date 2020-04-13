@@ -13,9 +13,13 @@ class Card extends Component {
         const playerCard = (decks.length > 0) ? decks[0][0] : ''
         const computerCard = (decks.length > 0) ? decks[0][0] : '';
         const localUrl = (image != '') ? `/images/${image}.jpg` : '';
+
         return decks != undefined && (
             <div className="card-holder">
-                <h4>{`${playerTurn ? "Your turn" : "CPU turn"}`}</h4>
+                <div className='card-header'>
+                    <h3>Prop Trumps</h3>
+                    <h4>{`${playerTurn ? "Your turn" : "CPU turn"}`}</h4>
+                </div>
                 < div className="plane-card" >
                     <h4 className="plane-name">{name != undefined ? name : "Plane"}</h4>
                     <div><img className="card-image" style={{ backgroundImage: `url(${localUrl})` }} /></div>

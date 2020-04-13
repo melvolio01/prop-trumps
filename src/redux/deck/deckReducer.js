@@ -1,10 +1,12 @@
 import actionTypes from '../actionTypes';
+import { checkWin } from '../../helpers/deckHelpers';
 
 const INITIAL_STATE = {
     players: [],
     decks: [],
     playerTurn: true,
-    selectedProperty: ''
+    selectedProperty: '',
+    winner: ''
 }
 
 const deckReducer = (state = INITIAL_STATE, action) => {
@@ -28,6 +30,11 @@ const deckReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 playerTurn: !state.playerTurn
+            }
+        case actionTypes.CHECK_WIN:
+            return {
+                ...state,
+                winner: checkWin(action.payload)
             }
         default:
             return INITIAL_STATE

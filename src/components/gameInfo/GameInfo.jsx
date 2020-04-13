@@ -10,7 +10,6 @@ const GameInfo = ({ players, selectedProperty, decks,
     let scoreClass;
     let checkedDecks = '';
     const cpuSelection = handleCPUTurn();
-    console.log(selectedProperty);
     // check for decks and selectedProperty, update decks
     if ((decks.length > 0) && (selectedProperty !== '')) {
         scoreClass = decks[0][0][selectedProperty] > decks[1][0][selectedProperty] ? "won" : "lost";
@@ -20,7 +19,7 @@ const GameInfo = ({ players, selectedProperty, decks,
     if (!playerTurn) {
         setTimeout(() => {
             if (selectedProperty === "") setSelectedProperty(cpuSelection)
-        }, 1000)
+        }, 500)
     }
 
     return (
@@ -43,7 +42,6 @@ const updateDecks = (checkedDecks, setDecks, setSelectedProperty, setTurn) => {
     setSelectedProperty('');
     setDecks(checkedDecks);
     setTurn()
-    console.log('updateDecks()')
 }
 
 const handleDecks = (playerDeck, computerDeck, scoreClass) => {
